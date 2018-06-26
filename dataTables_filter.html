@@ -163,55 +163,63 @@
                                             </div>
                                             <div class="demo_content">
                                                 <pre class="brush:css;">
-/* widget */
-.widget {
-    padding: 0;
-    -webkit-box-shadow: 1px 0px 20px rgba(0,0,0,0.08) !important;
-    -moz-box-shadow: 1px 0px 20px rgba(0,0,0,0.08) !important;
-    box-shadow: 1px 0px 20px rgba(0,0,0,0.08) !important;
-}
-.widget-header.bordered-bottom {
-    border-bottom: 1px solid #eee !important;
-}
-.widget .widget-header {
-    min-height: 50px;
-}
+                                                    /* widget */
+                                                    .widget {
+                                                        padding: 0;
+                                                        -webkit-box-shadow: 1px 0px 20px rgba(0,0,0,0.08) !important;
+                                                        -moz-box-shadow: 1px 0px 20px rgba(0,0,0,0.08) !important;
+                                                        box-shadow: 1px 0px 20px rgba(0,0,0,0.08) !important;
+                                                    }
+                                                    .widget-header.bordered-bottom {
+                                                        border-bottom: 1px solid #eee !important;
+                                                    }
+                                                    .widget .widget-header {
+                                                        min-height: 50px;
+                                                    }
 
-.widget .widget-header {
-    overflow: hidden;
-    height: auto;
-}
-.widget-header, .widget-body {
-    box-shadow: none !important;
-}
-.widget-header {
-    padding-left: 10px;
-    padding-right: 5px;
-}
-.widget-header {
-    text-align: center !important;
-}
+                                                    .widget .widget-header {
+                                                        overflow: hidden;
+                                                        height: auto;
+                                                    }
+                                                    .widget-header, .widget-body {
+                                                        box-shadow: none !important;
+                                                    }
+                                                    .widget-header {
+                                                        padding-left: 10px;
+                                                        padding-right: 5px;
+                                                    }
+                                                    .widget-header {
+                                                        text-align: center !important;
+                                                    }
 
-/* widget header */
-/* widget caption  */
+                                                    /* widget header */
+                                                    /* widget caption  */
 
-/* widget button */
-.widget-buttons {
-    padding-top: 9px;
-}
+                                                    /* widget button */
+                                                    .widget-buttons {
+                                                        padding-top: 9px;
+                                                    }
 
 
 
                                                 </pre>
                                             </div>
                                         </div> <!-- demo-wrapper -->
-                                        <div class="demo-wrapper hidden"> <!-- JS -->
+                                        <div class="demo-wrapper"> <!-- JS -->
                                             <div class="demo-title">
                                                 <span class="left">JS</span>
                                             </div>
                                             <div class="demo_content">
                                                 <pre class="brush:js;">
-                                                               
+                                                    jQuery(document).on('click', '.dataFilter_Dropdown .dropdown-toggle', function(){
+                                                        jQuery(this).parents(".dataFilter_Dropdown").toggleClass("open");
+                                                        jQuery(this).parents(".quickSearch ").find(".dataFilter_Dropdown_target").toggleClass("open");
+                                                    });
+                                                    jQuery(document).on('click', '.dataFilter_Dropdown_close', function(e){
+                                                        e.preventDefault();
+                                                        jQuery(this).parents(".quickSearch").find(".dataFilter_Dropdown").toggleClass("open");
+                                                        jQuery(this).parents(".quickSearch").find(".dataFilter_Dropdown_target").toggleClass("open");
+                                                    });      
                                                 </pre>
                                             </div>
                                         </div> <!-- demo-wrapper -->
